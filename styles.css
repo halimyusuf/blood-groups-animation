@@ -1,0 +1,152 @@
+.blood-bag {
+    width: 100px;
+    height: 150px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 10px solid #dddddd;
+    transform: rotate(180deg);
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.hose {
+    height: Calc(40vh - 10px);
+    background: #dddddd;
+    width: 7px;
+    left: 50%;
+    position: absolute;
+    top: Calc(10vh + 160px);
+}
+
+.hose .hose-progress {
+    background-color: #ff0000 !important;
+    height: 0;
+    width: 7px;
+    animation: hose-move 2s linear 0s 1 normal forwards;
+}
+
+.blood {
+    position: relative;
+    bottom: 0;
+    background-color: #ff0000;
+    overflow: hidden;
+    height: 70%;
+}
+
+.reduce-blood {
+    animation: reduce-blood 2s linear 0s 1 normal forwards;
+}
+
+.bg {
+    height: 0.7vh;
+    width: 15vw;
+    background-color: #dddddd;
+    margin-top: 8.6vh;
+}
+
+.A-,
+.O-,
+.B-,
+.AB- {
+    background-color: #ff0000;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    margin-left: Calc(15vw + 10px);
+    /* margin-top: -10px; */
+}
+
+.left {
+    margin-left: -40px;
+}
+
+.left-progress {
+    background-color: #dddddd;
+    height: 5px;
+    /* animation: move-backwards 2s linear 2s 1 normal forwards; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.right-progress {
+    height: 5px;
+    width: 0;
+    background-color: red;
+}
+
+.O--progress {
+    animation: move-backwards 2s linear 2s 1 normal forwards;
+}
+
+.O-progress {
+    animation: move-forwards 2s linear 2s 1 normal forwards;
+}
+
+.A--progress {
+    animation: move-backwards 2s linear 2s 1 normal forwards;
+}
+
+.A-progress {
+    animation: move-forwards 2s linear 2s 1 normal forwards;
+}
+
+.B--progress {
+    animation: move-backwards 2s linear 2s 1 normal forwards;
+}
+
+.B-progress {
+    animation: move-forwards 2s linear 2s 1 normal forwards;
+}
+
+.AB--progress {
+    animation: move-backwards 2s linear 2s 1 normal forwards;
+}
+
+.AB-progress {
+    animation: move-forwards 2s linear 2s 1 normal forwards;
+}
+
+@keyframes reduce-blood {
+    from {
+        height: 70%;
+    }
+
+    to {
+        height: 30%;
+    }
+}
+
+@keyframes hose-move {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: Calc(40vh - 10px);
+    }
+}
+
+@keyframes move-forwards {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 15vw;
+    }
+}
+
+@keyframes move-backwards {
+    from {
+        width: 15vw;
+    }
+
+    to {
+        width: 0;
+    }
+
+}
