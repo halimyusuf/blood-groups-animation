@@ -11,47 +11,59 @@
 
 <body>
     <div class="home">
-        <div class="blood-groups"></div>
-        <div class="blood-bag">
-            <div class="reduce-blood blood"></div>
+        <div class="blood-btn">
+            <button id="O-">O-</button>
+            <button id="O">O+</button>
+            <button id="A-">A-</button>
+            <button id="A">A+</button>
+            <button id="B-">B-</button>
+            <button id="B">B+</button>
+            <button id="AB-">AB-</button>
+            <button id="AB">AB</button>
         </div>
+        <div class="blood-groups">
+            <div class="blood-bag">
+                <div class="reduce-blood blood"></div>
+            </div>
 
-        <div class="line">
-            <div class="bg O-">
-                <div class="left-progress O--progress"></div><span class="left">O-</span>
+            <div class="line">
+                <div class="bg O-">
+                    <div class="left-progress O--progress"></div><span class="left">O-</span>
+                </div>
+                <div class="bg O">
+                    <div class="right-progress O-progress"></div><span class="right">O+</span>
+                </div>
             </div>
-            <div class="bg O">
-                <div class="right-progress O-progress"></div><span class="right">O+</span>
+            <div class="line">
+                <div class="bg A-">
+                    <div class="left-progress A--progress"></div><span class="left">A-</span>
+                </div>
+                <div class="bg A">
+                    <div class="right-progress A-progress"></div><span class="right">A+</span>
+                </div>
             </div>
-        </div>
-        <div class="line">
-            <div class="bg A-">
-                <div class="left-progress A--progress"></div><span class="left">A-</span>
+            <div class="line">
+                <div class="bg B-">
+                    <div class="left-progress B--progress"></div><span class="left">B-</span>
+                </div>
+                <div class="bg B">
+                    <div class="right-progress B-progress"></div><span class="right">B+</span>
+                </div>
             </div>
-            <div class="bg A">
-                <div class="right-progress A-progress"></div><span class="right">A+</span>
-            </div>
-        </div>
-        <div class="line">
-            <div class="bg B-">
-                <div class="left-progress B--progress"></div><span class="left">B-</span>
-            </div>
-            <div class="bg B">
-                <div class="right-progress B-progress"></div><span class="right">B+</span>
-            </div>
-        </div>
-        <div class="line">
-            <div class="bg AB-">
-                <div class="left-progress AB--progress"></div><span class="left">AB-</span>
-            </div>
-            <div class="bg AB">
-                <div class="right-progress AB-progress"></div><span class="right">AB+</span>
+            <div class="line">
+                <div class="bg AB-">
+                    <div class="left-progress AB--progress"></div><span class="left">AB-</span>
+                </div>
+                <div class="bg AB">
+                    <div class="right-progress AB-progress"></div><span class="right">AB+</span>
+                </div>
             </div>
         </div>
     </div>
     <div class="hose">
         <div class="hose-progress"></div>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

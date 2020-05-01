@@ -1,12 +1,37 @@
+.blood-groups {
+    /* margin-top: 30px; */
+}
+
+.blood-btn {
+    top: 80px;
+    left: 10px;
+    position: absolute;
+    display: flex;
+    width: 184px;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: 3px;
+    color: red;
+    border: 0.5px solid red;
+    background-color: white;
+    border-radius: 8px;
+    width: 40px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
 .blood-bag {
-    width: 100px;
-    height: 150px;
+    width: 70px;
+    height: 120px;
     border-radius: 50px;
     overflow: hidden;
     border: 10px solid #dddddd;
     transform: rotate(180deg);
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 .hose {
@@ -15,10 +40,10 @@
     width: 7px;
     left: 50%;
     position: absolute;
-    top: Calc(10vh + 160px);
+    top: Calc(20vh + 130px);
 }
 
-.hose .hose-progress {
+.hose-progress {
     background-color: #ff0000 !important;
     height: 0;
     width: 7px;
@@ -38,10 +63,11 @@
 }
 
 .bg {
-    height: 0.7vh;
-    width: 15vw;
+    height: 5px;
+    width: 20vw;
     background-color: #dddddd;
-    margin-top: 8.6vh;
+    margin-top: Calc((40vh - 40px) / 4);
+    position: relative;
 }
 
 .A-,
@@ -49,6 +75,7 @@
 .B-,
 .AB- {
     background-color: #ff0000;
+    height: 5px;
 }
 
 .line {
@@ -57,8 +84,7 @@
 }
 
 .right {
-    margin-left: Calc(15vw + 10px);
-    /* margin-top: -10px; */
+    margin-left: Calc(20vw + 10px);
 }
 
 .left {
@@ -136,13 +162,13 @@
     }
 
     to {
-        width: 15vw;
+        width: 20vw;
     }
 }
 
 @keyframes move-backwards {
     from {
-        width: 15vw;
+        width: 20vw;
     }
 
     to {
