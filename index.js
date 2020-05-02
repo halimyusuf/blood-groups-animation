@@ -30,31 +30,45 @@ for (let blood of Object.keys(oNegative)) {
     if (
       document.querySelector('.hose div').classList.contains('hose-progress')
     ) {
-      sheet.insertRule(
-        '.forwards { animation: move-forwards 0.5s linear 0s 1 normal forwards;}',
-        0
-      );
-      sheet.insertRule(
-        '.backwards {animation: move-backwards 0.5s linear 0s 1 normal forwards;}',
-        1
-      );
+      if ('insertRule' in sheet) {
+        sheet.insertRule(
+          '.forwards { animation: move-forwards 0.5s linear 0s 1 normal forwards;}',
+          0
+        );
+        sheet.insertRule(
+          '.backwards {animation: move-backwards 0.5s linear 0s 1 normal forwards;}',
+          1
+        );
+      } else if ('addRule' in sheet) {
+        sheet.addRule(
+          '.forwards',
+          'animation: move-forwards 0.5s linear 0s 1 normal forwards;',
+          0
+        );
+        sheet.addRule(
+          '.backwards',
+          'animation: move-backwards 0.5s linear 0s 1 normal forwards;',
+          1
+        );
+      }
     }
     document.querySelector('.blood').classList.add('reduce-blood');
     document.querySelector('.hose div').classList.add('hose-progress');
     let rest = allGrp.diff(oNegative[blood]);
-
     for (let bloodClass of oNegative[blood]) {
       let bloodElement;
       bloodElement = document.querySelector(`.${bloodClass} div`);
       if (bloodClass.indexOf('-') === -1) {
         if (bloodElement.classList.contains(backwards)) {
           bloodElement.classList.add(forwards);
+          bloodElement.classList.remove(backwards);
         } else {
           bloodElement.classList.add(forwards);
         }
       } else {
         if (bloodElement.classList.contains(forwards)) {
           bloodElement.classList.add(backwards);
+          bloodElement.classList.remove(forwards);
         } else {
           bloodElement.classList.add(backwards);
         }
