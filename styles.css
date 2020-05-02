@@ -1,7 +1,3 @@
-.blood-groups {
-    /* margin-top: 30px; */
-}
-
 .blood-btn {
     top: 80px;
     left: 10px;
@@ -21,6 +17,12 @@ button {
     height: 30px;
     outline: none;
     cursor: pointer;
+}
+
+.blood-btn button:active {
+    background: red;
+    color: white;
+    /* background: green; */
 }
 
 .blood-bag {
@@ -47,7 +49,7 @@ button {
     background-color: #ff0000 !important;
     height: 0;
     width: 7px;
-    animation: hose-move 2s linear 0s 1 normal forwards;
+    animation: hose-move 1s linear 0s 1 normal forwards;
 }
 
 .blood {
@@ -59,7 +61,7 @@ button {
 }
 
 .reduce-blood {
-    animation: reduce-blood 2s linear 0s 1 normal forwards;
+    animation: reduce-blood 1.5s linear 0s 1 normal forwards;
 }
 
 .bg {
@@ -75,7 +77,6 @@ button {
 .B-,
 .AB- {
     background-color: #ff0000;
-    height: 5px;
 }
 
 .line {
@@ -94,7 +95,6 @@ button {
 .left-progress {
     background-color: #dddddd;
     height: 5px;
-    /* animation: move-backwards 2s linear 2s 1 normal forwards; */
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
@@ -104,36 +104,12 @@ button {
     background-color: red;
 }
 
-.O--progress {
-    animation: move-backwards 2s linear 2s 1 normal forwards;
+.forwards {
+    animation: move-forwards 0.5s linear 1s 1 normal forwards;
 }
 
-.O-progress {
-    animation: move-forwards 2s linear 2s 1 normal forwards;
-}
-
-.A--progress {
-    animation: move-backwards 2s linear 2s 1 normal forwards;
-}
-
-.A-progress {
-    animation: move-forwards 2s linear 2s 1 normal forwards;
-}
-
-.B--progress {
-    animation: move-backwards 2s linear 2s 1 normal forwards;
-}
-
-.B-progress {
-    animation: move-forwards 2s linear 2s 1 normal forwards;
-}
-
-.AB--progress {
-    animation: move-backwards 2s linear 2s 1 normal forwards;
-}
-
-.AB-progress {
-    animation: move-forwards 2s linear 2s 1 normal forwards;
+.backwards {
+    animation: move-backwards 0.5s linear 1s 1 normal forwards;
 }
 
 @keyframes reduce-blood {
